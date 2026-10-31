@@ -113,8 +113,17 @@ footer{color:var(--muted); font-size:.85rem; padding:2rem 0 3rem; border-top:1px
 """
 
 
+def clean_title(t):
+    """Tar bort "Alvert.se - " som blogg.se lägger före rubriken."""
+    t = re.sub(r"^\s*Alvert\.se\s*[-–—|:]\s*", "", t, flags=re.I)
+    t = re.sub(r"\s*[-–—|:]\s*Alvert\.se\s*$", "", t, flags=re.I)
+    return t.strip() or "Utan rubrik"
+
+
 def load_posts():
     posts = [json.loads(f.read_text(encoding="utf-8")) for f in POSTS_DIR.glob("*.json")]
+    for p in posts:
+        p["title"] = clean_title(p["title"])
     # nyast först; inom samma tidpunkt gäller ordningen i blogg.se:s månadsarkiv
     posts.sort(key=lambda p: (p["date"], -p.get("order", 0)), reverse=True)
     return posts

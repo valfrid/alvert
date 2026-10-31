@@ -305,13 +305,15 @@ def extract_post(url, html):
         else str(container)
     body = re.sub(r"(\s*<br/?>\s*){3,}", "<br/><br/>", body)
 
+    title = re.sub(r"^\s*Alvert\.se\s*[-–—|:]\s*", "", title or heading_text, flags=re.I).strip()
+
     return {
         "url": url,
         "path": path,
         "year": int(year),
         "month": month_en,
         "slug": slug,
-        "title": title or heading_text,
+        "title": title,
         "date": date_iso,
         "date_text": date_text,
         "categories": categories,
