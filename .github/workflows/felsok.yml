@@ -13,10 +13,11 @@ jobs:
           mkdir -p debug
           UA="Mozilla/5.0 (alvert-arkiv)"
           curl -sL -A "$UA" https://alvert.se/2021/june/ -o debug/month.html
-          curl -sL -A "$UA" https://alvert.se/2021/june/sista-veckan.html -o debug/post.html || true
+          true
           curl -sL -A "$UA" https://alvert.se/ -o debug/home.html
-          curl -sL -A "$UA" "https://alvert.se/index.rss" -o debug/rss.xml || true
+          curl -sL -A "$UA" https://static.blogg.se/shared/js/api.js -o debug/api.js
+          curl -sL -A "$UA" https://static.blogg.se/themes/power-mom/assets/js/min/main-min.js -o debug/main.js
           ls -la debug
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add debug && git commit -m "Felsökning: råa sidor" && git push
+          git add debug && git commit -m "Felsökning: skript" && git push
