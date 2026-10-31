@@ -1,0 +1,28 @@
+{
+ "url": "https://alvert.se/2013/june/supernatural.html",
+ "path": "/2013/june/supernatural.html",
+ "year": 2013,
+ "month": "june",
+ "slug": "supernatural",
+ "title": "Supernatural",
+ "date": "2013-06-16T20:31",
+ "timestamp": 1371407475,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<p>Ligger i sängen hemma nu äntligen och myser med Tom till några avsnitt supernatural. En sjukt bra serie för folk som gillar scifi/skräck förresten! Imorgon skall jag jobba och vet ni hur skönt det känns att inte behöva tänka på skolan alltså. Är bara så lättad!</p><p style=\"text-align:center\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/pic_51be046fddf2b30ed8aec35e.jpg\"/></p><p style=\"text-align:center\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/pic_51be0472e087c302222d96aa.jpg\"/></p>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/pic_51be046fddf2b30ed8aec35e.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/pic_51be046fddf2b30ed8aec35e.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/pic_51be0472e087c302222d96aa.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/pic_51be0472e087c302222d96aa.jpg"
+  }
+ ]
+}

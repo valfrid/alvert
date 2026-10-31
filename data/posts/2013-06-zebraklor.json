@@ -1,0 +1,32 @@
+{
+ "url": "https://alvert.se/2013/june/zebraklor.html",
+ "path": "/2013/june/zebraklor.html",
+ "year": 2013,
+ "month": "june",
+ "slug": "zebraklor",
+ "title": "Zebraklor",
+ "date": "2013-06-04T16:39",
+ "timestamp": 1370356742,
+ "categories": [
+  {
+   "name": "Pyssel",
+   "slug": "pyssel"
+  }
+ ],
+ "tags": [
+  "Nagellack",
+  "Ränder",
+  "Zebra"
+ ],
+ "html": "<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/dsc07032_51adfad09606ee7458e470aa.jpg\"/>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/dsc07016_51adfaceddf2b3172062ace6.jpg\"/></div>\n<div>Satt och målade naglarna igårkväll och denna gång blev resultatet såhär! Zebraränder på rosa bakgrund. Man känner sig alltid lika fin med nymålade naglar :)</div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/dsc07032_51adfad09606ee7458e470aa.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/dsc07032_51adfad09606ee7458e470aa.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/dsc07016_51adfaceddf2b3172062ace6.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/dsc07016_51adfaceddf2b3172062ace6.jpg"
+  }
+ ]
+}

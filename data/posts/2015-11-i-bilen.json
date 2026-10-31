@@ -1,0 +1,28 @@
+{
+ "url": "https://alvert.se/2015/november/i-bilen.html",
+ "path": "/2015/november/i-bilen.html",
+ "year": 2015,
+ "month": "november",
+ "slug": "i-bilen",
+ "title": "I bilen",
+ "date": "2015-11-08T11:05",
+ "timestamp": 1446977133,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/9-3/dsc08165_561e22859606ee10edb8da57.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/9-3/dsc08180_561e2289e087c31ac5b6dd22.jpg\"/></div>\n<div>\n<div> </div>\n<div style=\"text-align: left;\">Efter sovmorgon och frukost på sängen för Tom blev det att snabbt hoppa i kläderna och sätta sig i bilen efter en inbjudan till play date i Onsala. Svängde precis av motorvägen så nu har vi knappt halvvägs kvar. Älskar att det är så fint väder trots att vi är en bra bit in i november. Så får det gärna fortsätta!</div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/9-3/dsc08165_561e22859606ee10edb8da57.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/9-3/dsc08165_561e22859606ee10edb8da57.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/9-3/dsc08180_561e2289e087c31ac5b6dd22.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/9-3/dsc08180_561e2289e087c31ac5b6dd22.jpg"
+  }
+ ]
+}

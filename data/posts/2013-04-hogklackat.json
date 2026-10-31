@@ -1,0 +1,28 @@
+{
+ "url": "https://alvert.se/2013/april/hogklackat.html",
+ "path": "/2013/april/hogklackat.html",
+ "year": 2013,
+ "month": "april",
+ "slug": "hogklackat",
+ "title": "Högklackat",
+ "date": "2013-04-11T09:12",
+ "timestamp": 1365664334,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<div>Dags att gå in mina skor som jag fyndade förra veckan. Köpte dem på halva reapriset för 100 kronor!! En dag med mest stillasittande borde ju gå ganska ok. Får se vad mina fötter säger i eftermiddag.</div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/image_51666207e087c370a557f183.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_5166621ce087c37082d75a2b.jpg\"/></div>",
+ "images": [
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/image_51666207e087c370a557f183.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/image_51666207e087c370a557f183.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_5166621ce087c37082d75a2b.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_5166621ce087c37082d75a2b.jpg"
+  }
+ ]
+}

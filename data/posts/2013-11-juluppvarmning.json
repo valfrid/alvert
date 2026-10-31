@@ -1,0 +1,61 @@
+{
+ "url": "https://alvert.se/2013/november/juluppvarmning.html",
+ "path": "/2013/november/juluppvarmning.html",
+ "year": 2013,
+ "month": "november",
+ "slug": "juluppvarmning",
+ "title": "Juluppvärmning",
+ "date": "2013-11-18T16:28",
+ "timestamp": 1384788480,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [
+  "Foto",
+  "Fredagsmys",
+  "Hamster",
+  "Kladdkaka",
+  "Mat",
+  "Mys",
+  "glögg",
+  "tgif"
+ ],
+ "html": "<div>Bilder från min mysfredag med Joe tänkte jag att jag bara måste lägga upp. Blev så mycket flängande i helgen så det glömdes helt bort. </div>\n<div> </div>\n<div>Det blev en fantastiskt mysig kväll med julstämning. Visserligen är det ju bara november och jag måste erkänna att Josefin hade med sig glögg kändes först lite konstigt, men oj så gott det var!  Tack för trevligaste kvällen och fina sällskapet.</div>\n<div> </div>\n<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_005_528a140fe087c348f1a7c5a6.jpg\"/><br/><br/>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_007_528a14122a6b22582a0be317.jpg\"/></div>\n<div> </div>\n<img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_004_528a140d9606ee693e42fe34.jpg\"/></div>\n<div style=\"text-align: center;\"> </div>\n<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_012_528a155d88e59d442aaddd7f.jpg\"/></div>\n<div> </div>\n</div>\n<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/rmyskvall_med_joe_005_528a142a88e59d383cd5b6a8.jpg\"/></div>\n<div>\n<div style=\"text-align: center;\"> </div>\n<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_007_528a142d2a6b225142c78fbb.jpg\"/></div>\n<div style=\"text-align: center;\"> </div>\n<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_009_528a1430ddf2b37a35ad45c4.jpg\"/></div>\n<div style=\"text-align: center;\"> </div>\n<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_017_528a143388e59d2deab94b9c.jpg\"/></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_005_528a140fe087c348f1a7c5a6.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_005_528a140fe087c348f1a7c5a6.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_007_528a14122a6b22582a0be317.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_007_528a14122a6b22582a0be317.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_004_528a140d9606ee693e42fe34.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_004_528a140d9606ee693e42fe34.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_012_528a155d88e59d442aaddd7f.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_012_528a155d88e59d442aaddd7f.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/rmyskvall_med_joe_005_528a142a88e59d383cd5b6a8.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/rmyskvall_med_joe_005_528a142a88e59d383cd5b6a8.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_007_528a142d2a6b225142c78fbb.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/rmyskvall_med_joe_007_528a142d2a6b225142c78fbb.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_009_528a1430ddf2b37a35ad45c4.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_009_528a1430ddf2b37a35ad45c4.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_017_528a143388e59d2deab94b9c.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/rmyskvall_med_joe_017_528a143388e59d2deab94b9c.jpg"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "url": "https://alvert.se/2013/june/gladjetar.html",
+ "path": "/2013/june/gladjetar.html",
+ "year": 2013,
+ "month": "june",
+ "slug": "gladjetar",
+ "title": "Glädjetår",
+ "date": "2013-06-07T10:24",
+ "timestamp": 1370593466,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  },
+  {
+   "name": "Studier och Jobb",
+   "slug": "studier-och-jobb"
+  }
+ ],
+ "tags": [],
+ "html": "<div>Kan man bli mer än sjukt glad när man efter gårdagens inlägg får en massa pepp från goa människor runtomkring en? Både här och på facebook fick jag pepp och fick även sms från en vän jag inte träffat på länge som peppade mig trots att hon har egen tenta hägrande. Världen är fylld av fina människor!</div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_51b19879ddf2b34037fc931d.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/image_51b19891e087c32643bebe55.jpg\"/></div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_51b19879ddf2b34037fc931d.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_51b19879ddf2b34037fc931d.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/image_51b19891e087c32643bebe55.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/image_51b19891e087c32643bebe55.jpg"
+  }
+ ]
+}

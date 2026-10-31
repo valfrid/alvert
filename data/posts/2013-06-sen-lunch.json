@@ -1,0 +1,24 @@
+{
+ "url": "https://alvert.se/2013/june/sen-lunch.html",
+ "path": "/2013/june/sen-lunch.html",
+ "year": 2013,
+ "month": "june",
+ "slug": "sen-lunch",
+ "title": "Sen lunch",
+ "date": "2013-06-06T17:50",
+ "timestamp": 1370533844,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<p>Ceasarsallad med halloumi efter ett fint träningspass på gymmet och man känner sig som en kung, eller ja drottning då då!</p><p style=\"text-align:center\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/pic_51b0afd4e087c32673462022.jpg\"/></p>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/pic_51b0afd4e087c32673462022.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/pic_51b0afd4e087c32673462022.jpg"
+  }
+ ]
+}

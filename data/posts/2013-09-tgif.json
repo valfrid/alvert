@@ -1,0 +1,28 @@
+{
+ "url": "https://alvert.se/2013/september/tgif.html",
+ "path": "/2013/september/tgif.html",
+ "year": 2013,
+ "month": "september",
+ "slug": "tgif",
+ "title": "TGIF",
+ "date": "2013-09-20T10:48",
+ "timestamp": 1379666880,
+ "categories": [
+  {
+   "name": "Allmänt",
+   "slug": "allmant"
+  }
+ ],
+ "tags": [],
+ "html": "<center>Pluggdagen börjar lugnt och fint med mysfrukost framför tvn. Ikväll är det konfa som står på agendan och innan dess så ska jag plugga så mycket jag kan. TGIF!<br/><br/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/20130920_101026_523c0815ddf2b325f6b50b04.jpg\"/> <br/><br/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/20130920_101013_523c0807ddf2b354aa98b84a.jpg\"/></center><center></center>",
+ "images": [
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/20130920_101026_523c0815ddf2b325f6b50b04.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/20130920_101026_523c0815ddf2b325f6b50b04.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/20130920_101013_523c0807ddf2b354aa98b84a.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/20130920_101013_523c0807ddf2b354aa98b84a.jpg"
+  }
+ ]
+}

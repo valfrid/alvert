@@ -1,0 +1,32 @@
+{
+ "url": "https://alvert.se/2011/november/ny-design.html",
+ "path": "/2011/november/ny-design.html",
+ "year": 2011,
+ "month": "november",
+ "slug": "ny-design",
+ "title": "Ny Design",
+ "date": "2011-11-20T21:05",
+ "timestamp": 1321819512,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "Passade på när man ändå inte har så mycket läxor (eller rättare sagt inte ABSOLUT måste göra läxor) att göra om designen på bloggen. Fina blåa färger blev det :) Vad tycks?<br/><br/><a href=\"/img/cdn2.cdnme.se/cdn/7-1/2672483/images/2011/header-2_175807436.jpg\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/cdn/7-1/2672483/images/2011/header-2_175807436_thumb.jpg\"/></a><br/>\n<div>\n<div style=\"text-align: right;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/cdn/7-1/2672483/images/2011/tag-2_175815568.jpg\"/></div>\n</div>",
+ "images": [
+  {
+   "key": "cdn2.cdnme.se/cdn/7-1/2672483/images/2011/header-2_175807436_thumb.jpg",
+   "src": "https://cdn2.cdnme.se/cdn/7-1/2672483/images/2011/header-2_175807436_thumb.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/cdn/7-1/2672483/images/2011/tag-2_175815568.jpg",
+   "src": "https://cdn3.cdnme.se/cdn/7-1/2672483/images/2011/tag-2_175815568.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/cdn/7-1/2672483/images/2011/header-2_175807436.jpg",
+   "src": "https://cdn2.cdnme.se/cdn/7-1/2672483/images/2011/header-2_175807436.jpg"
+  }
+ ]
+}

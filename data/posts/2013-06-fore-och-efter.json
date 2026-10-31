@@ -1,0 +1,32 @@
+{
+ "url": "https://alvert.se/2013/june/fore-och-efter.html",
+ "path": "/2013/june/fore-och-efter.html",
+ "year": 2013,
+ "month": "june",
+ "slug": "fore-och-efter",
+ "title": "Före och efter",
+ "date": "2013-06-04T11:35",
+ "timestamp": 1370338519,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [
+  "Blond",
+  "Frisör",
+  "Hår"
+ ],
+ "html": "<div>Tänkte att ni kanske ville se en före och en efter bild på håret. Snacka om skillnad!! Kände mig allt lite omtumlad imorse när jag vaknade och insåg att jag fortfarande var blondin. Dags att börja vänja sig helt enkelt ;)<br/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/wp_000895_51adb4449606ee6ce9e2002c.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/wp_000904_51adb446ddf2b364bc6b068d.jpg\"/></div>\n<div> </div>",
+ "images": [
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/wp_000895_51adb4449606ee6ce9e2002c.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/wp_000895_51adb4449606ee6ce9e2002c.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/wp_000904_51adb446ddf2b364bc6b068d.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/wp_000904_51adb446ddf2b364bc6b068d.jpg"
+  }
+ ]
+}

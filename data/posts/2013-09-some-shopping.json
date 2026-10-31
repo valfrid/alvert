@@ -1,0 +1,65 @@
+{
+ "url": "https://alvert.se/2013/september/some-shopping.html",
+ "path": "/2013/september/some-shopping.html",
+ "year": 2013,
+ "month": "september",
+ "slug": "some-shopping",
+ "title": "Some shopping",
+ "date": "2013-09-05T18:32",
+ "timestamp": 1378398724,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  },
+  {
+   "name": "Kläder och Skönhet",
+   "slug": "klader-och-skonhet"
+  }
+ ],
+ "tags": [
+  "Gillar",
+  "H&M",
+  "Halsband",
+  "Jordgubbar",
+  "Magsjuka",
+  "Newyorker",
+  "Proviva",
+  "Tröjor"
+ ],
+ "html": "<div>Trots att träningen var inställd med Joe idag ville jag ändå komma iväg från huset bara en liten stund. Jag tog bilen och åkte till Frölunda Torg för lite shopping. Hade fortfarande födelsedagspengar kvar som fick gå till dessa fina höstplagg samt ett fint kedjehalsband. Hoodtröjan är från H&amp;M och resten är från.... Newyorker!! Älskarälskar den affären!</div>\n<div> </div>\n<div>Nu kan jag äntligen slänga ut mina gamla tröjor med hål och grejer i för att ge plats åt dessa fräscha. Kan verkligen behövas. Jag är urdålig på att slänga/ge bort kläder :P</div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/redigeraddsc08340_5228afcfe087c36d7f830968.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/redigeraddsc08339_5228afab9606ee2b70668fcb.jpg\"/><br/>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/redigeraddsc08336_5228af59e087c36ee926b80f.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/redigeraddsc08334_5228aef09606ee56424e6806.jpg\"/></div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/redigeraddsc08337_5228af89ddf2b3048b96f8f8.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/redigeraddsc08335_5228af25ddf2b34bc2cef0a0.jpg\"/>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/redigeraddsc08341_5228aff2e087c350c45a5781.jpg\"/></div>\n<div>Sen köpte jag även proviva Jordgubb som är både smaskens och superbra för Toms mage. Nu hoppas vi på att han blir bättre snart stackarn.\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/redigeraddsc08333_5228ae159606ee3fc895b0c3.jpg\"/></div>\n<div> </div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/redigeraddsc08340_5228afcfe087c36d7f830968.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/redigeraddsc08340_5228afcfe087c36d7f830968.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/redigeraddsc08339_5228afab9606ee2b70668fcb.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/redigeraddsc08339_5228afab9606ee2b70668fcb.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/redigeraddsc08336_5228af59e087c36ee926b80f.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/redigeraddsc08336_5228af59e087c36ee926b80f.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/redigeraddsc08334_5228aef09606ee56424e6806.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/redigeraddsc08334_5228aef09606ee56424e6806.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/redigeraddsc08337_5228af89ddf2b3048b96f8f8.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/redigeraddsc08337_5228af89ddf2b3048b96f8f8.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/redigeraddsc08335_5228af25ddf2b34bc2cef0a0.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/redigeraddsc08335_5228af25ddf2b34bc2cef0a0.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/redigeraddsc08341_5228aff2e087c350c45a5781.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/redigeraddsc08341_5228aff2e087c350c45a5781.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/redigeraddsc08333_5228ae159606ee3fc895b0c3.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/redigeraddsc08333_5228ae159606ee3fc895b0c3.jpg"
+  }
+ ]
+}

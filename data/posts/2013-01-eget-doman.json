@@ -1,0 +1,24 @@
+{
+ "url": "https://alvert.se/2013/january/eget-doman.html",
+ "path": "/2013/january/eget-doman.html",
+ "year": 2013,
+ "month": "january",
+ "slug": "eget-doman",
+ "title": "Eget domän",
+ "date": "2013-01-13T18:28",
+ "timestamp": 1358098080,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<div style=\"text-align: center;\">Ni kanske redan har sett det men nu har jag skaffat ett eget domän. Ni kommer fortfarande åt min blogg genom alvert.blogg.se men nu har jag officiellt bara alvert.se ;) snabbare att skriva och kanske lite tjusigare!<br/>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/cdn/7-1/2672483/images/2013/doman_50f1c15be087c35d352bdb0b.jpg\"/></div>\n</div>",
+ "images": [
+  {
+   "key": "cdn3.cdnme.se/cdn/7-1/2672483/images/2013/doman_50f1c15be087c35d352bdb0b.jpg",
+   "src": "https://cdn3.cdnme.se/cdn/7-1/2672483/images/2013/doman_50f1c15be087c35d352bdb0b.jpg"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "url": "https://alvert.se/2014/april/sjukstuga.html",
+ "path": "/2014/april/sjukstuga.html",
+ "year": 2014,
+ "month": "april",
+ "slug": "sjukstuga",
+ "title": "Sjukstuga",
+ "date": "2014-04-02T15:38",
+ "timestamp": 1396445904,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [
+  "Frukt",
+  "Gravid",
+  "Sjuk",
+  "Trött",
+  "feber",
+  "förkyld",
+  "himym",
+  "how I met your mother"
+ ],
+ "html": "<div>Ja här hemma är det sjukstuga idag. Vaknade upp med en brännande och rivande hals, snörvlig näsa och har dessutom börjat frysa så gissar att febern är på intågande. Tur att jag ändå hade tänkt ha en vilodag idag då. </div>\n<div style=\"text-align: center;\">\n<div> </div>\n<div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/rsjukling_008_533c11ed2a6b228cdd58d04e.jpg\"/></div>\n<div> </div>\n</div>\n</div>\n</div>\n<div>Jag skall kurera mig lite grann med härligt kall melon och päron och lite How I Met Your Mother tänkte jag och så hoppas jag att det vänder och går åt rätt håll. Onödigt att vara mer sjuk än nödvändigt tycker jag! Vet ju inte riktigt om jag bara har en sån där extratrött dag eller om jag faktiskt känner mig hängig. Dagens ilandsproblem känner jag ;)</div>\n<div> </div>\n<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/rsjukling_004_533c11edddf2b3507e6a57d8.jpg\"/></div>\n<div> </div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/rsjukling_003_533c11ecddf2b36d36322e1d.jpg\"/></div>\n<div> </div>\n<div style=\"text-align: left;\">Någon som har lite huskurer för förkylningar att erbjuda?? Kanske borde be Tom köpa hem lite glass?</div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/rsjukling_008_533c11ed2a6b228cdd58d04e.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/rsjukling_008_533c11ed2a6b228cdd58d04e.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/rsjukling_004_533c11edddf2b3507e6a57d8.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/rsjukling_004_533c11edddf2b3507e6a57d8.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/rsjukling_003_533c11ecddf2b36d36322e1d.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/rsjukling_003_533c11ecddf2b36d36322e1d.jpg"
+  }
+ ]
+}

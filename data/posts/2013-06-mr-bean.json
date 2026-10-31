@@ -1,0 +1,32 @@
+{
+ "url": "https://alvert.se/2013/june/mr-bean.html",
+ "path": "/2013/june/mr-bean.html",
+ "year": 2013,
+ "month": "june",
+ "slug": "mr-bean",
+ "title": "Mr Bean",
+ "date": "2013-06-25T21:14",
+ "timestamp": 1372187663,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<div>Pappa skulle åka och hämta ett paket på posten idag. Paketet var stort. Bagaget var fullt med blomjord. Pappa binder fast paketet på taket. Pappa binder fast paketet på taket utan takräcke med ett enda spännband(!!)</div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/20130625_202549_51c9eb60e087c31ec419a2be.jpg\"/></div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/20130625_202607_51c9eb7bddf2b34df9f9e222.jpg\"/></div>\n<div>Mamma liknade det vid Mr Bean och det var väl rena rama turen att paketet inte trillade av. Det hölls fast baktill av antennen ju! Jomen visst. Pappa och Mr Bean har nog ett och annat gemensamt ändå.\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/atkinsonkoja683_51c9ebc4e087c31eb0ac9b1e.jpg\"/></div>\n<div> </div>\n<br/><br/></div>\n<div> </div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/20130625_202549_51c9eb60e087c31ec419a2be.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/20130625_202549_51c9eb60e087c31ec419a2be.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/20130625_202607_51c9eb7bddf2b34df9f9e222.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/20130625_202607_51c9eb7bddf2b34df9f9e222.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/atkinsonkoja683_51c9ebc4e087c31eb0ac9b1e.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/atkinsonkoja683_51c9ebc4e087c31eb0ac9b1e.jpg"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "url": "https://alvert.se/2014/september/myspojken.html",
+ "path": "/2014/september/myspojken.html",
+ "year": 2014,
+ "month": "september",
+ "slug": "myspojken",
+ "title": "Myspojken",
+ "date": "2014-09-06T14:39",
+ "timestamp": 1410007181,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_540afc769606ee7bb692ab18.jpg\"/></div>\n<div> </div>\n</div>\n<div><strong>Sitter framför tvn i stugan</strong> med en liten pojk stendäckad på bröstet. Eftersom Tom skulle iväg till några kompisar och hänga igår valde jag att följa med mina föräldrar hit för en myshelg och frånsett lite smågnäll från en sömnig kille förut har han varit riktigt gosig.</div>\n<div> </div>\n<div style=\"text-align: center;\">\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_540afdb62a6b220c00f7d81a.jpg\"/></div>\n<div> </div>\n<div style=\"text-align: left;\">Har fått en massa söta leenden idag och han har legat och sovit på både mig, sin mormor och sin morfar. Han charmar mig gång på gång den skrutten. Snart kommer dessutom Tom hit och myser så det kan ju knappast bli bättre.</div>\n</div>\n</div>\n<div> </div>\n<div><strong>Vi har fått låna en babybjörnsele</strong> av Bella och Danne vilken jag använt en hel del nu när jag varit sjuk och sjalen blivit för varm. Lillkillen gillar den starkt men den är ju inte lika mysig eller ergonomisk som sjalen så jag är glad att jag har fått chansen att ha både och. Finns som sagt fördelar med båda och lillen somnar gott i bägge två efter lite skump.</div>\n<div> </div>\n<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/image_540aff8c2a6b22973ba636f7.jpg\"/>   <img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/image_540aff8d2a6b2243672c560a.jpg\"/></div>\n<div>\n<div> </div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_540afc769606ee7bb692ab18.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_540afc769606ee7bb692ab18.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_540afdb62a6b220c00f7d81a.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_540afdb62a6b220c00f7d81a.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/image_540aff8c2a6b22973ba636f7.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/image_540aff8c2a6b22973ba636f7.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/image_540aff8d2a6b2243672c560a.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/image_540aff8d2a6b2243672c560a.jpg"
+  }
+ ]
+}

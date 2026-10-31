@@ -1,0 +1,44 @@
+{
+ "url": "https://alvert.se/2016/january/favoritbrodet.html",
+ "path": "/2016/january/favoritbrodet.html",
+ "year": 2016,
+ "month": "january",
+ "slug": "favoritbrodet",
+ "title": "Favoritbrödet",
+ "date": "2016-01-10T17:00",
+ "timestamp": 1452441600,
+ "categories": [
+  {
+   "name": "Alvert Tipsar",
+   "slug": "alvert-tipsar"
+  },
+  {
+   "name": "Mat",
+   "slug": "mat"
+  }
+ ],
+ "tags": [
+  "Bröd",
+  "Frukost",
+  "Gott",
+  "Ost",
+  "Tips",
+  "favorit",
+  "fazer",
+  "grönsaker",
+  "gurka",
+  "macka",
+  "rågform"
+ ],
+ "html": "<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/9-3/20160109_102252_569237b39606ee332eaa1adb.jpg\"/></div>\n<div> </div>\n</div>\n<div>Har sedan några månader tillbaks fullkomligt förälskat mig i detta bröd. Det är verkligen så rackarns smarrigt! Det är inte ofta vi har det hemma men när vi väl lyckas köpa med oss det hem blir det stående ovationer av smaklökarna till frukost varje dag. Smör, ost och så gärna toppat med någon grönsak. MUMS!</div>\n<div> </div>\n<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/9-3/20160109_102213_569237b8e087c32968b2df53.jpg\"/></div>\n<div><em>Dagens frukost! Satt fint vill jag lova ;)</em></div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/9-3/20160109_102252_569237b39606ee332eaa1adb.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/9-3/20160109_102252_569237b39606ee332eaa1adb.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/9-3/20160109_102213_569237b8e087c32968b2df53.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/9-3/20160109_102213_569237b8e087c32968b2df53.jpg"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "url": "https://alvert.se/2013/september/dagens-motivation.html",
+ "path": "/2013/september/dagens-motivation.html",
+ "year": 2013,
+ "month": "september",
+ "slug": "dagens-motivation",
+ "title": "Dagens motivation!",
+ "date": "2013-09-19T07:21",
+ "timestamp": 1379568060,
+ "categories": [
+  {
+   "name": "Studier och Jobb",
+   "slug": "studier-och-jobb"
+  }
+ ],
+ "tags": [
+  "Fysiologi, Farmakologi och Biokemi",
+  "Göteborgs Universitet",
+  "Läkarprogrammet",
+  "Sahlgrenska",
+  "T3",
+  "Tentaplugg"
+ ],
+ "html": "<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/peanuts_520c03a79606ee2a97195eb0.jpg\"/></div>\n<div> </div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/peanuts_520c03a79606ee2a97195eb0.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/peanuts_520c03a79606ee2a97195eb0.jpg"
+  }
+ ]
+}

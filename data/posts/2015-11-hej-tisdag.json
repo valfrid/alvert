@@ -1,0 +1,42 @@
+{
+ "url": "https://alvert.se/2015/november/hej-tisdag.html",
+ "path": "/2015/november/hej-tisdag.html",
+ "year": 2015,
+ "month": "november",
+ "slug": "hej-tisdag",
+ "title": "Hej Tisdag",
+ "date": "2015-11-03T08:30",
+ "timestamp": 1446535800,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  },
+  {
+   "name": "Mat",
+   "slug": "mat"
+  }
+ ],
+ "tags": [
+  "Frukost",
+  "Göteborg",
+  "Läkarstudent",
+  "Mamma",
+  "Plugg",
+  "VAB",
+  "barn bebis",
+  "scones",
+  "ung mamma"
+ ],
+ "html": "<div style=\"text-align: center;\">\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/9-3/img_0059_5637d57fe087c375c66429f2.jpg\"/><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/9-3/img_0061_5636659fddf2b308936ba101.jpg\"/></div>\n<div> </div>\n<div style=\"text-align: left;\">God morgon! Vincent är fortfarande rätt krasslig så det blir en hemmadag för oss idag med. Startar dagen med scones till frukost och sedan har vi inte mycket till planer. Ut en sväng för lite frisk luft är ju nästan ett måste och så skall jag nog försöka mig på projektet att göra egen müsli av de ingredienser jag köpte när jag veckohandlade igår. Vi får väl se hur det går men vad jag har hört skall det inte vara supersvårt. Får återkomma med resutatet!</div>\n<div style=\"text-align: left;\"> </div>\n<div style=\"text-align: left;\">Håller tummarna också för att Vincent sover en längre stund efter lunch så att jag får lite tid för plugg. Vill ju inte hamna allt för mycket efter nu när jag måste vara hemma. Hoppas ni får en bra dag!</div>\n<div> </div>\n</div>",
+ "images": [
+  {
+   "key": "cdn2.cdnme.se/2672483/9-3/img_0059_5637d57fe087c375c66429f2.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/9-3/img_0059_5637d57fe087c375c66429f2.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/9-3/img_0061_5636659fddf2b308936ba101.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/9-3/img_0061_5636659fddf2b308936ba101.jpg"
+  }
+ ]
+}

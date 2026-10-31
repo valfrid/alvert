@@ -1,0 +1,34 @@
+{
+ "url": "https://alvert.se/2013/march/cykla.html",
+ "path": "/2013/march/cykla.html",
+ "year": 2013,
+ "month": "march",
+ "slug": "cykla",
+ "title": "Cykla",
+ "date": "2013-03-18T21:13",
+ "timestamp": 1363637586,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  },
+  {
+   "name": "Studier och Jobb",
+   "slug": "studier-och-jobb"
+  }
+ ],
+ "tags": [
+  "Cykel"
+ ],
+ "html": "<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/wp_000473_514774a9e087c37eecf9f88b.jpg\"/>\n<div>Fick den fantastiska idéen att försöka mig på att cykla till skolan idag igen. Ingen bra idé! Min cykel är en gammal och skruttig en från japan som av någon anledning har låst sig på högsta växeln. Detta gör att jag fick stå och trampa (hela vägen till skolan går uppför) i 30 minuter. Eller sålänge det gick i alla fall. Jag fick både leda cykeln och sätta mig och vila på en bänk för att inte spy. Jag vet inte hur jag tänkte egentligen eftersom det hände exakt samma sak förra gången jag försökte mig på denna mission. Måste se till att fixa cykeln så att det går att ta sig framåt utan att fullkomligt dö av svett! Trots nedför nästan hela vägen hem så var jag rejält trött efter cyklandet så nu får jag minsann hålla mig tills jag har en fungerande cykel.</div>\n</div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/wp_000475_514774a9e087c37eed994b12.jpg\"/></div>\n<div style=\"text-align: center;\"><em>Innanför dörren, äntligen hemma!</em></div>",
+ "images": [
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/wp_000473_514774a9e087c37eecf9f88b.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/wp_000473_514774a9e087c37eecf9f88b.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/wp_000475_514774a9e087c37eed994b12.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/wp_000475_514774a9e087c37eed994b12.jpg"
+  }
+ ]
+}

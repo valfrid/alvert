@@ -1,0 +1,46 @@
+{
+ "url": "https://alvert.se/2013/october/bibblan-och-blabar.html",
+ "path": "/2013/october/bibblan-och-blabar.html",
+ "year": 2013,
+ "month": "october",
+ "slug": "bibblan-och-blabar",
+ "title": "Bibblan och blåbär",
+ "date": "2013-10-15T16:22",
+ "timestamp": 1381846961,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  },
+  {
+   "name": "Studier och Jobb",
+   "slug": "studier-och-jobb"
+  }
+ ],
+ "tags": [
+  "Bibliotek",
+  "Läkarstudent",
+  "Plugga",
+  "Smoothie",
+  "stryka"
+ ],
+ "html": "<div>Kort dag i skolan idag så jag och Anders gick och satte oss på bibblan för att plugga lite. Börjar bli mer och mer kär i det där biblioteket asså. Fick lite gjort i alla fall innan jag kände hur magen kurrade och jag packade ihop och drog mig hemmåt.</div>\n<div> </div>\n<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_525d4d2ae087c36c8e8f2b73.jpg\"/>   <img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/image_525d4d2cddf2b349a504c1b4.jpg\"/></div>\n<div style=\"text-align: center;\"> </div>\n<div style=\"text-align: left;\">Nu är jag mitt uppe i sysslorna som man så illa är tvungen att göra med egen lya, men det blir vad man gör det till så jag har fixat till en smoothie och satt på Glee på Netflix så det ska nog bli bra detta.</div>\n<div style=\"text-align: left;\"> </div>\n<div style=\"text-align: left;\">\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/image_525d4e6eddf2b34e931e88d7.jpg\"/></div>\n<div style=\"text-align: center;\"> </div>\n<div>\n<div style=\"text-align: center;\"><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_525d4e70e087c37a235634a7.jpg\"/></div>\n<div> </div>\n</div>\n</div>\n<div> </div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_525d4d2ae087c36c8e8f2b73.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_525d4d2ae087c36c8e8f2b73.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/image_525d4d2cddf2b349a504c1b4.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/image_525d4d2cddf2b349a504c1b4.jpg"
+  },
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/image_525d4e6eddf2b34e931e88d7.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/image_525d4e6eddf2b34e931e88d7.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_525d4e70e087c37a235634a7.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_525d4e70e087c37a235634a7.jpg"
+  }
+ ]
+}

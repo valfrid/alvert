@@ -1,0 +1,28 @@
+{
+ "url": "https://alvert.se/2013/may/sommarlordag.html",
+ "path": "/2013/may/sommarlordag.html",
+ "year": 2013,
+ "month": "may",
+ "slug": "sommarlordag",
+ "title": "Sommarlördag",
+ "date": "2013-05-18T15:25",
+ "timestamp": 1368883545,
+ "categories": [
+  {
+   "name": "Fritid",
+   "slug": "fritid"
+  }
+ ],
+ "tags": [],
+ "html": "<div>Lunch ute på verandan och man mår underbart! Jag och mamma har varit och handlat till ikväll och nu skall jag sätta mig och plugga lite grann!<br/>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn3.cdnme.se/2672483/7-3/dsc05890_5197811addf2b3353682d2bc.jpg\"/>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/dsc05897_5197812fe087c34153901847.jpg\"/></div>\n</div>\n</div>",
+ "images": [
+  {
+   "key": "cdn3.cdnme.se/2672483/7-3/dsc05890_5197811addf2b3353682d2bc.jpg",
+   "src": "https://cdn3.cdnme.se/2672483/7-3/dsc05890_5197811addf2b3353682d2bc.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/dsc05897_5197812fe087c34153901847.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/dsc05897_5197812fe087c34153901847.jpg"
+  }
+ ]
+}

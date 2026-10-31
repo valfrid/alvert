@@ -1,0 +1,32 @@
+{
+ "url": "https://alvert.se/2013/june/i-did-it.html",
+ "path": "/2013/june/i-did-it.html",
+ "year": 2013,
+ "month": "june",
+ "slug": "i-did-it",
+ "title": "I did it!!",
+ "date": "2013-06-20T22:20",
+ "timestamp": 1371759600,
+ "categories": [
+  {
+   "name": "Studier och Jobb",
+   "slug": "studier-och-jobb"
+  }
+ ],
+ "tags": [],
+ "html": "<div><span>Har kommit hem från 13-timmarspasset. Herregud vad jag är slut men jag har haft sjukt roligt. Lunchen intogs på 30 minuter på ett café i gallerian. Fötterna ömmar, ryggen värker och huvudet är helt tomt just nu. Ska bara kolla nått avsnitt av supernatural och sen däckar jag nog.</span></div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_51c36255ddf2b343908bb675.jpg\"/></div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn2.cdnme.se/2672483/7-3/image_51c3629cddf2b3432e8a18e5.jpg\"/></div>\n<div>\n<div><img alt=\"\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/7-3/image_51c362acddf2b342a85d0505.jpg\"/></div>\n</div>\n</div>\n<div><span>Är så glad att jag har så härliga arbetskollegor trots att de tycker att jag är \"gammal\". Jag är nämligen ett/två år äldre än dem. Ojojoj gamla tanten alltså :P hehe</span></div>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_51c36255ddf2b343908bb675.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_51c36255ddf2b343908bb675.jpg"
+  },
+  {
+   "key": "cdn2.cdnme.se/2672483/7-3/image_51c3629cddf2b3432e8a18e5.jpg",
+   "src": "https://cdn2.cdnme.se/2672483/7-3/image_51c3629cddf2b3432e8a18e5.jpg"
+  },
+  {
+   "key": "cdn1.cdnme.se/2672483/7-3/image_51c362acddf2b342a85d0505.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/7-3/image_51c362acddf2b342a85d0505.jpg"
+  }
+ ]
+}
