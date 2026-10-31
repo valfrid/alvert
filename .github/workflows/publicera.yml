@@ -10,18 +10,18 @@ on:
         description: "Hämta om inlägg som redan är sparade"
         type: boolean
         default: false
-      deploy:
-        description: "Publicera på Cloudflare efteråt"
-        type: boolean
-        default: true
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
-concurrency: alvert
+concurrency:
+  group: alvert
+  cancel-in-progress: false
 
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 340
     steps:
@@ -50,27 +50,39 @@ jobs:
             git push
           fi
 
-      - name: Kopiera bilder till R2
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      # Bilderna sparas i GitHubs cache mellan körningar, inte i repot
+      - name: Hämta tidigare nedladdade bilder
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/img
+          key: bilder-${{ github.run_id }}
+          restore-keys: bilder-
+
+      - name: Ladda ner bilder
         run: python scraper/images.py
 
-      - name: Spara listan över saknade bilder
+      - name: Spara bilderna till nästa körning
         if: always()
-        run: |
-          git add data
-          git diff --cached --quiet || (git commit -m "Uppdaterade bildlistan" && git push)
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/img
+          key: bilder-${{ github.run_id }}
 
       - name: Bygg sajten
-        run: python scraper/build.py
+        run: BASE_PATH="/${{ github.event.repository.name }}" python scraper/build.py
 
-      - name: Publicera på Cloudflare
-        if: inputs.deploy
-        uses: cloudflare/wrangler-action@v3
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          wranglerVersion: "4"
-          command: deploy
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

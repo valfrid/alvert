@@ -3,8 +3,13 @@
 Bygger den statiska bloggen i dist/ från data/posts/*.json.
 Behåller samma adresser som på blogg.se, så gamla länkar fortsätter fungera:
   /2021/july/hon-har-ett-namn.html, /2021/july/, /category/fritid.html
+
+Miljövariabeln BASE_PATH sätts när sajten ligger i en undermapp,
+t.ex. BASE_PATH=/alvert för valfrid.github.io/alvert/.
 """
 import json
+import os
+import re
 import shutil
 from collections import OrderedDict, defaultdict
 from html import escape
@@ -13,6 +18,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = ROOT / "data" / "posts"
 DIST = ROOT / "dist"
+IMG_CACHE = ROOT / ".cache" / "img"
+BASE = os.environ.get("BASE_PATH", "").rstrip("/")
+
+
+def u(path):
+    """Gör en sökväg på sajten till en adress med rätt bas."""
+    return BASE + path
 
 SITE = "Alvert.se"
 PER_PAGE = 8
@@ -121,7 +133,7 @@ def date_long(p):
 def page(title, body, current=""):
     nav = [("/", "Senaste", "home"), ("/arkiv/", "Arkiv", "arkiv"), ("/kategorier/", "Kategorier", "kat")]
     links = "".join(
-        f'<a href="{h}"{" aria-current=\"page\"" if k == current else ""}>{t}</a>' for h, t, k in nav
+        f'<a href="{u(h)}"{" aria-current=\"page\"" if k == current else ""}>{t}</a>' for h, t, k in nav
     )
     full_title = SITE if title == SITE else f"{title} – {SITE}"
     return f"""<!doctype html>
@@ -133,12 +145,12 @@ def page(title, body, current=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="{u("/style.css")}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌷</text></svg>">
 </head>
 <body>
 <header class="site"><div class="wrap">
-<a class="site-name" href="/">{SITE}</a>
+<a class="site-name" href="{u("/")}">{SITE}</a>
 <nav>{links}</nav>
 </div></header>
 <main class="wrap">
@@ -152,10 +164,10 @@ def page(title, body, current=""):
 
 def post_html(p, level="h2"):
     d = int(p["date"][8:10])
-    cats = ", ".join(f'<a href="/category/{escape(c["slug"])}.html">{escape(c["name"])}</a>'
+    cats = ", ".join(f'<a href="{u("/category/" + escape(c["slug"]) + ".html")}">{escape(c["name"])}</a>'
                      for c in p.get("categories", []))
     title = escape(p["title"])
-    head = title if level == "h1" else f'<a href="{escape(p["path"])}">{title}</a>'
+    head = title if level == "h1" else f'<a href="{u(escape(p["path"]))}">{title}</a>'
     return f"""<article class="post">
 <div class="post-head">
 <div class="stamp" aria-hidden="true"><span class="d">{d}</span><span class="m">{month_label(p)}</span></div>
@@ -165,15 +177,44 @@ def post_html(p, level="h2"):
 </div>
 </div>
 <div class="body">
-{p["html"]}
+{body_html(p)}
 </div>
 </article>"""
+
+
+MISSING_IMAGES = set()
+
+
+def body_html(p):
+    html = p["html"]
+    # bilder som inte gick att hämta pekar på originalet hos blogg.se
+    for img in p.get("images", []):
+        if img["key"] in MISSING_IMAGES:
+            html = html.replace(f'"/img/{img["key"]}"', f'"{escape(img["src"])}"')
+    # interna länkar och bilder får rätt bas
+    return re.sub(r'(\s(?:href|src)=")/(?!/)', lambda m: m.group(1) + BASE + "/", html)
+
+
+def copy_images(posts):
+    copied = 0
+    for p in posts:
+        for img in p.get("images", []):
+            src = IMG_CACHE / img["key"]
+            if src.exists():
+                dst = DIST / "img" / img["key"]
+                if not dst.exists():
+                    dst.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(src, dst)
+                    copied += 1
+            else:
+                MISSING_IMAGES.add(img["key"])
+    return copied
 
 
 def post_list(posts):
     rows = "".join(
         f'<li><time datetime="{p["date"][:10]}">{p["date"][:10]}</time>'
-        f'<a href="{escape(p["path"])}">{escape(p["title"])}</a></li>'
+        f'<a href="{u(escape(p["path"]))}">{escape(p["title"])}</a></li>'
         for p in posts
     )
     return f'<ul class="list">{rows}</ul>'
@@ -191,13 +232,15 @@ def build():
         shutil.rmtree(DIST)
     DIST.mkdir()
     (DIST / "style.css").write_text(CSS, encoding="utf-8")
+    (DIST / ".nojekyll").write_text("", encoding="utf-8")
+    copied = copy_images(posts)
 
     # startsida med sidnumrering
     pages = [posts[i:i + PER_PAGE] for i in range(0, len(posts), PER_PAGE)] or [[]]
     for n, chunk in enumerate(pages, start=1):
         body = "\n".join(post_html(p) for p in chunk) or "<p>Inga inlägg ännu. Kör hämtningen först.</p>"
-        newer = "" if n == 1 else f'<a href="{"/" if n == 2 else f"/sida/{n - 1}/"}">Nyare inlägg</a>'
-        older = "" if n == len(pages) else f'<a class="older" href="/sida/{n + 1}/">Äldre inlägg</a>'
+        newer = "" if n == 1 else f'<a href="{u("/" if n == 2 else f"/sida/{n - 1}/")}">Nyare inlägg</a>'
+        older = "" if n == len(pages) else f'<a class="older" href="{u(f"/sida/{n + 1}/")}">Äldre inlägg</a>'
         body += f'<nav class="pager">{newer}{older}</nav>'
         rel = "index.html" if n == 1 else f"sida/{n}/index.html"
         write(rel, page(SITE if n == 1 else f"Sida {n}", body, "home" if n == 1 else ""))
@@ -208,9 +251,9 @@ def build():
         older = posts[i + 1] if i + 1 < len(posts) else None
         nav = '<nav class="pager">'
         if newer:
-            nav += f'<a href="{escape(newer["path"])}"><small>Nyare</small>{escape(newer["title"])}</a>'
+            nav += f'<a href="{u(escape(newer["path"]))}"><small>Nyare</small>{escape(newer["title"])}</a>'
         if older:
-            nav += f'<a class="older" href="{escape(older["path"])}"><small>Äldre</small>{escape(older["title"])}</a>'
+            nav += f'<a class="older" href="{u(escape(older["path"]))}"><small>Äldre</small>{escape(older["title"])}</a>'
         nav += "</nav>"
         write(p["path"], page(p["title"], post_html(p, "h1") + nav))
 
@@ -227,7 +270,7 @@ def build():
     arch = '<h1 class="page-title">Arkiv</h1>'
     for y, months in years.items():
         items = "".join(
-            f'<li><a href="/{y}/{m}/">{SV[EN.index(m)].capitalize()}</a> <small>{n}</small></li>'
+            f'<li><a href="{u(f"/{y}/{m}/")}">{SV[EN.index(m)].capitalize()}</a> <small>{n}</small></li>'
             for m, n in sorted(months, key=lambda x: EN.index(x[0]), reverse=True)
         )
         arch += f'<h2 class="year">{y}</h2><ul class="months">{items}</ul>'
@@ -244,7 +287,7 @@ def build():
         write(f"category/{slug}.html",
               page(names[slug], f'<h1 class="page-title">{escape(names[slug])}</h1>' + post_list(ps)))
     catlist = "".join(
-        f'<li><a href="/category/{escape(s)}.html">{escape(names[s])}</a> <small>{len(cats[s])}</small></li>'
+        f'<li><a href="{u("/category/" + escape(s) + ".html")}">{escape(names[s])}</a> <small>{len(cats[s])}</small></li>'
         for s in sorted(cats, key=lambda s: names[s].lower())
     )
     write("kategorier/index.html",
@@ -252,11 +295,15 @@ def build():
 
     write("404.html", page("Sidan finns inte",
                            '<h1 class="page-title">Sidan finns inte</h1>'
-                           '<p>Adressen leder inte till något inlägg. Leta i <a href="/arkiv/">arkivet</a> '
-                           'eller gå till <a href="/">startsidan</a>.</p>'))
+                           f'<p>Adressen leder inte till något inlägg. Leta i <a href="{u("/arkiv/")}">arkivet</a> '
+                           f'eller gå till <a href="{u("/")}">startsidan</a>.</p>'))
 
-    files = sum(1 for _ in DIST.rglob("*") if _.is_file())
-    print(f"Byggde {len(posts)} inlägg, {len(by_month)} månader, {len(cats)} kategorier ({files} filer i dist/)")
+    files = [f for f in DIST.rglob("*") if f.is_file()]
+    size = sum(f.stat().st_size for f in files) / 1e6
+    print(f"Byggde {len(posts)} inlägg, {len(by_month)} månader, {len(cats)} kategorier, "
+          f"{copied} bilder ({len(MISSING_IMAGES)} länkas till blogg.se). {len(files)} filer, {size:.0f} MB.")
+    if size > 950:
+        print("VARNING: sajten är nära eller över GitHub Pages gräns på 1 GB.")
 
 
 if __name__ == "__main__":
