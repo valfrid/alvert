@@ -1,0 +1,76 @@
+name: Hämta och publicera bloggen
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max antal nya inlägg (0 = alla). Använd t.ex. 5 för ett test."
+        default: "0"
+      refresh:
+        description: "Hämta om inlägg som redan är sparade"
+        type: boolean
+        default: false
+      deploy:
+        description: "Publicera på Cloudflare efteråt"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency: alvert
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Hämta inlägg från alvert.se
+        run: python scraper/scrape.py --limit "${{ inputs.limit }}" ${{ inputs.refresh && '--refresh' || '' }}
+
+      - name: Spara inläggen i repot
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Inga nya inlägg att spara"
+          else
+            git commit -m "Hämtade inlägg $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Kopiera bilder till R2
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: python scraper/images.py
+
+      - name: Spara listan över saknade bilder
+        if: always()
+        run: |
+          git add data
+          git diff --cached --quiet || (git commit -m "Uppdaterade bildlistan" && git push)
+
+      - name: Bygg sajten
+        run: python scraper/build.py
+
+      - name: Publicera på Cloudflare
+        if: inputs.deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4"
+          command: deploy
