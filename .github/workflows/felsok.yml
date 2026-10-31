@@ -12,9 +12,9 @@ jobs:
       - run: |
           mkdir -p debug
           UA="Mozilla/5.0 (alvert-arkiv)"
-          curl -sL -A "$UA" https://alvert.se/_more/entries_1627228084 -o debug/more.json
-          curl -sL -A "$UA" https://alvert.se/_more/entries_2021-june_1624944800 -o debug/more-month.json
+          curl -sL -A "$UA" https://alvert.se/_more/entries_2011-march_1900000000 -o debug/more.json
+          curl -sL -A "$UA" https://alvert.se/_more/entries_1900000000 -o debug/more-month.json
           ls -la debug
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add debug && git commit -m "Felsökning: mer-inlägg" && git push
+          git add debug && git commit -m "Felsökning: tidsstämpel" && git push
