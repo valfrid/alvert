@@ -1,0 +1,24 @@
+{
+ "url": "https://alvert.se/2011/march/hej-och-valkommen-till-min-blogg.html",
+ "path": "/2011/march/hej-och-valkommen-till-min-blogg.html",
+ "year": 2011,
+ "month": "march",
+ "slug": "hej-och-valkommen-till-min-blogg",
+ "title": "Hej och välkommen till min blogg!",
+ "date": "2011-03-01",
+ "date_text": "1 mars 2011",
+ "categories": [
+  {
+   "name": "Allmänt",
+   "slug": "allmant"
+  }
+ ],
+ "html": "<div>\n<div>\n<div>\n\n</div>\n</div>\n<div>\n<a href=\"/2011/march/hej-och-valkommen-till-min-blogg.html\">Hej och välkommen till min blogg!</a>\n</div>\n\n<div data-losjs=\"borka-panorama-0\"></div>\n\n\n</div>\n<div></div>\n<div>\n<section><div style=\"text-align: center;\">\n<div>\n<div><img alt=\"\" data-oid=\"5e52bc7f9606ee107fe751b8\" loading=\"lazy\" src=\"/img/cdn1.cdnme.se/2672483/9-3/20200219_120940_5e52bc7f9606ee107fe751b8.jpg\" width=\"300/\"/></div>\n<div> </div>\n</div>\n<div>Alice heter jag, är 26 år gammal och bor i Göteborg (eller Lindome om man skall vara riktigt petig) tillsammans med min nu mera man Tom (vi gifte oss 191019) och våra två barn Vincent och Charlie. En person med både humor och envishet om du frågar mina nära och kära och med en stor portion barnasinne kvar. Just nu pusslar jag mamma- och familjeliv med det spännande arbetslivet som nybliven läkare och det är just vad jag delar med mig av i den här bloggen.</div>\n</div>\n<div style=\"text-align: center;\"> </div>\n<div style=\"text-align: center;\">Följ med på vårt äventyr som kallas livet!</div></section>\n</div>",
+ "images": [
+  {
+   "key": "cdn1.cdnme.se/2672483/9-3/20200219_120940_5e52bc7f9606ee107fe751b8.jpg",
+   "src": "https://cdn1.cdnme.se/2672483/9-3/20200219_120940_5e52bc7f9606ee107fe751b8.jpg"
+  }
+ ],
+ "order": 0
+}
