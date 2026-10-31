@@ -124,8 +124,8 @@ def load_posts():
     posts = [json.loads(f.read_text(encoding="utf-8")) for f in POSTS_DIR.glob("*.json")]
     for p in posts:
         p["title"] = clean_title(p["title"])
-    # nyast först; inom samma tidpunkt gäller ordningen i blogg.se:s månadsarkiv
-    posts.sort(key=lambda p: (p["date"], -p.get("order", 0)), reverse=True)
+    # nyast först
+    posts.sort(key=lambda p: (p["date"], p.get("timestamp", 0)), reverse=True)
     return posts
 
 

@@ -7,7 +7,8 @@ Adresserna följer blogg.se, t.ex. `/2021/july/hon-har-ett-namn.html`.
 
 ## Så fungerar det
 
-1. `scraper/scrape.py` hämtar alla inlägg och sparar dem som JSON i `data/posts/`.
+1. `scraper/scrape.py` hämtar alla inlägg via blogg.se:s egen "ladda fler"-adress
+   (`/_more/entries_<år>-<månad>_<tidsstämpel>`) och sparar dem som JSON i `data/posts/`.
    Bara rubrik, datum, kategorier, text, bilder och YouTube-klipp sparas.
    Reklam, delningsknappar och kommentarer följer inte med.
 2. `scraper/images.py` laddar ner bilderna och krymper de största till 1400 px breda.

@@ -9,7 +9,7 @@ Exempel:
   python scraper/scrape.py                 # hämta alla nya inlägg
   python scraper/scrape.py --limit 5       # testkörning med 5 inlägg
   python scraper/scrape.py --refresh       # hämta om även redan sparade inlägg
-  python scraper/scrape.py --debug https://alvert.se/2021/july/hon-har-ett-namn.html
+  python scraper/scrape.py --debug 2021-june
 """
 import argparse
 import hashlib
@@ -94,7 +94,10 @@ def classes_of(tag):
     return " ".join(tag.get("class", []) or []) + " " + (tag.get("id") or "")
 
 
-# ---------- hitta alla inlägg ----------
+# ---------- hitta alla inlägg via blogg.se:s "ladda fler"-adress ----------
+# Arkivsidorna visar bara ett inlägg och laddar resten med JavaScript från
+# /_more/entries_<år>-<månad>_<tidsstämpel>, som svarar med JSON:
+# {"count": n, "last_ts": ..., "entries": [{title, body, iso8601, permalink, categories, tags, ...}]}
 
 def discover_months(delay):
     html = fetch(BASE + "/", delay)
@@ -106,67 +109,41 @@ def discover_months(delay):
         _, host, path, _ = split_url(a["href"], BASE)
         m = MONTH_RE.match(path)
         if is_internal(host) and m and m.group(2) in EN_MONTHS:
-            url = f"{BASE}/{m.group(1)}/{m.group(2)}/"
-            if url not in months:
-                months.append(url)
+            key = (m.group(1), m.group(2))
+            if key not in months:
+                months.append(key)
     return months
 
 
-def posts_in_month(month_url, delay):
-    month_path = urlparse(month_url).path
-    queue, seen, posts = [month_url], set(), []
-    while queue and len(seen) < 60:
-        url = queue.pop(0)
-        if url in seen:
-            continue
-        seen.add(url)
-        html = fetch(url, delay)
-        if not html:
-            continue
-        soup = BeautifulSoup(html, "lxml")
-        for a in soup.find_all("a", href=True):
-            full, host, path, query = split_url(a["href"], url)
-            if not is_internal(host):
-                continue
-            if POST_RE.match(path) and path.startswith(month_path):
-                post_url = BASE + path
-                if post_url not in posts:
-                    posts.append(post_url)
-            elif path.rstrip("/") == month_path.rstrip("/") and query:
-                # sidnumrering, t.ex. ?page=2
-                queue.append(f"{BASE}{month_path}?{query}")
-            elif path.startswith(month_path) and path != month_path and not path.endswith(".html"):
-                queue.append(BASE + path)
-    return posts
+def fetch_json(url, delay):
+    text = fetch(url, delay)
+    if not text:
+        return None
+    try:
+        return json.loads(text)
+    except ValueError:
+        print(f"  ! inte JSON: {url}", file=sys.stderr)
+        return None
 
 
-# ---------- plocka ut ett inlägg ----------
-
-def count_category_links(tag):
-    return sum(1 for a in tag.find_all("a", href=True) if "/category/" in a["href"])
-
-
-def find_heading(soup, path):
-    for a in soup.find_all("a", href=True):
-        _, host, p, _ = split_url(a["href"], BASE)
-        if is_internal(host) and p == path and a.get_text(strip=True):
-            h = a.find_parent(["h1", "h2", "h3", "h4"])
-            if h:
-                return h
-    return None
-
-
-def find_container(heading):
-    best, node = heading, heading
-    while node.parent is not None and node.parent.name not in ("body", "html", "[document]"):
-        node = node.parent
-        too_many_cats = count_category_links(node) > 5
-        too_many_posts = len([h for h in node.find_all(["h1", "h2", "h3"]) if h.find("a")]) > 2
-        if too_many_cats or too_many_posts:
+def entries_in_month(year, month, delay):
+    ts, seen, entries = 1900000000, set(), []  # börja "i framtiden" = nyaste först
+    for _ in range(200):
+        data = fetch_json(f"{BASE}/_more/entries_{year}-{month}_{ts}", delay)
+        if not data or not data.get("count"):
             break
-        best = node
-    return best
+        for e in data.get("entries", []):
+            if e.get("id") not in seen:
+                seen.add(e.get("id"))
+                entries.append(e)
+        new_ts = data.get("last_ts")
+        if not new_ts or new_ts >= ts:
+            break
+        ts = new_ts
+    return entries
 
+
+# ---------- städa ett inlägg ----------
 
 def image_key(url):
     p = urlparse(url)
@@ -210,64 +187,12 @@ def remove_noise(container):
             a.decompose()
 
 
-def extract_post(url, html):
-    soup = BeautifulSoup(html, "lxml")
-    path = urlparse(url).path
-    year, month_en, slug = POST_RE.match(path).groups()
 
-    heading = find_heading(soup, path)
-    if heading is None:
-        og = soup.find("meta", property="og:title")
-        title = (og["content"] if og else slug).replace(" - Alvert.se", "").strip()
-        container = soup.find("article") or soup.body
-        heading_text = title
-    else:
-        title = heading.get_text(" ", strip=True)
-        container = find_container(heading)
-        heading_text = title
-        heading.decompose()
-
-    # kategorier
-    categories = []
-    for a in list(container.find_all("a", href=True)):
-        _, host, p, _ = split_url(a["href"], url)
-        m = CATEGORY_RE.match(p)
-        if is_internal(host) and m:
-            cat = {"name": a.get_text(" ", strip=True), "slug": m.group(1)}
-            if cat["name"] and cat not in categories:
-                categories.append(cat)
-            parent = a.parent
-            a.decompose()
-            if parent is not None and parent is not container and not parent.get_text(strip=True) and not parent.find("img"):
-                parent.decompose()
-
-    # datum
-    date_iso, date_text = None, None
-    time_tag = container.find("time")
-    text = container.get_text(" ", strip=True)
-    m = DATE_RE.search(text)
-    if m:
-        d, mon, y, hh, mm = m.groups()
-        date_text = m.group(0).strip()
-        date_iso = f"{int(y):04d}-{SV_MONTHS[mon.lower()]:02d}-{int(d):02d}"
-        if hh:
-            date_iso += f"T{int(hh):02d}:{mm}"
-        # ta bort det minsta elementet som bara innehåller datumet
-        for el in container.find_all(True):
-            t = el.get_text(" ", strip=True)
-            if date_text in t and len(t) < len(date_text) + 30 and not el.find("img"):
-                el.decompose()
-                break
-    elif time_tag and time_tag.get("datetime"):
-        date_iso = time_tag["datetime"][:16]
-    if time_tag and time_tag.parent is not None:
-        time_tag.decompose()
-    if not date_iso:
-        date_iso = f"{year}-{EN_MONTHS.index(month_en) + 1:02d}-01"
-
+def clean_body(html, url):
+    soup = BeautifulSoup(f"<div>{html}</div>", "lxml")
+    container = soup.body.div if soup.body and soup.body.div else soup
     remove_noise(container)
 
-    # bilder
     images = {}
     for img in container.find_all("img"):
         src = img.get("data-src") or img.get("data-original") or img.get("data-lazy-src") or img.get("src")
@@ -280,12 +205,12 @@ def extract_post(url, html):
         images[key] = full
         img["src"] = "/img/" + key
         img["loading"] = "lazy"
-        for attr in ("srcset", "data-src", "data-original", "data-lazy-src", "sizes", "style"):
+        for attr in ("srcset", "data-src", "data-original", "data-lazy-src", "sizes", "style",
+                     "width", "height", "data-oid"):
             img.attrs.pop(attr, None)
         if not img.get("alt"):
             img["alt"] = ""
 
-    # länkar
     for a in container.find_all("a", href=True):
         full, host, p, q = split_url(a["href"], url)
         if IMG_EXT_RE.search(urlparse(full).path) and full.startswith("http"):
@@ -294,19 +219,27 @@ def extract_post(url, html):
             a["href"] = "/img/" + key
         elif is_internal(host):
             a["href"] = p + (f"?{q}" if q else "")
-        a.attrs.pop("onclick", None)
 
     for el in container.find_all(True):
         for attr in list(el.attrs):
-            if attr.startswith("on") or attr in ("class", "id"):
+            if attr.startswith("on") or attr in ("class", "id") or attr.startswith("data-"):
                 del el.attrs[attr]
 
-    body = container.decode_contents().strip() if container.name in ("article", "div", "section", "main") \
-        else str(container)
+    body = container.decode_contents().strip()
+    body = body.replace("\\r\\n", "\n")
     body = re.sub(r"(\s*<br/?>\s*){3,}", "<br/><br/>", body)
+    return body, [{"key": k, "src": v} for k, v in images.items()]
 
-    title = re.sub(r"^\s*Alvert\.se\s*[-–—|:]\s*", "", title or heading_text, flags=re.I).strip()
 
+def entry_to_post(e):
+    path = e.get("permalink") or e.get("url") or "/" + e["slug"]
+    m = POST_RE.match(path)
+    if not m:
+        raise ValueError(f"okänd adress: {path}")
+    year, month_en, slug = m.groups()
+    url = BASE + path
+    body, images = clean_body(e.get("body", ""), url)
+    title = re.sub(r"^\s*Alvert\.se\s*[-–—|:]\s*", "", e.get("title") or slug, flags=re.I).strip()
     return {
         "url": url,
         "path": path,
@@ -314,11 +247,12 @@ def extract_post(url, html):
         "month": month_en,
         "slug": slug,
         "title": title,
-        "date": date_iso,
-        "date_text": date_text,
-        "categories": categories,
+        "date": (e.get("iso8601") or e.get("date") or f"{year}-01-01")[:16],
+        "timestamp": e.get("timestamp", 0),
+        "categories": [{"name": c["name"], "slug": c["slug"]} for c in e.get("categories", [])],
+        "tags": e.get("tags", []),
         "html": body,
-        "images": [{"key": k, "src": v} for k, v in images.items()],
+        "images": images,
     }
 
 
@@ -330,50 +264,45 @@ def post_file(url):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--limit", type=int, default=0, help="max antal inlägg att hämta (0 = alla)")
-    ap.add_argument("--refresh", action="store_true", help="hämta om redan sparade inlägg")
+    ap.add_argument("--limit", type=int, default=0, help="max antal inlägg att spara (0 = alla)")
+    ap.add_argument("--refresh", action="store_true", help="skriv över redan sparade inlägg")
     ap.add_argument("--delay", type=float, default=0.7, help="paus i sekunder mellan anrop")
-    ap.add_argument("--debug", metavar="URL", help="visa resultatet för ett enda inlägg")
+    ap.add_argument("--debug", metavar="ÅR-MÅNAD", help="visa resultatet för en månad, t.ex. 2021-june")
     args = ap.parse_args()
 
     if args.debug:
-        html = fetch(args.debug, 0)
-        post = extract_post(args.debug, html)
-        print(json.dumps(post, ensure_ascii=False, indent=2))
+        y, m = args.debug.split("-")
+        for e in entries_in_month(y, m, 0):
+            print(json.dumps(entry_to_post(e), ensure_ascii=False, indent=2))
         return
 
     POSTS_DIR.mkdir(parents=True, exist_ok=True)
     months = discover_months(args.delay)
     print(f"Hittade {len(months)} månader i arkivet")
 
-    saved = skipped = failed = 0
-    for month_url in months:
-        urls = posts_in_month(month_url, args.delay)
-        print(f"{month_url}: {len(urls)} inlägg")
-        for order, url in enumerate(urls):
-            f = post_file(url)
+    saved = skipped = failed = total = 0
+    for year, month in months:
+        entries = entries_in_month(year, month, args.delay)
+        total += len(entries)
+        print(f"{year} {month}: {len(entries)} inlägg")
+        for e in entries:
+            try:
+                post = entry_to_post(e)
+            except Exception as ex:  # ett trasigt inlägg ska inte stoppa resten
+                print(f"  ! kunde inte tolka {e.get('permalink')}: {ex}", file=sys.stderr)
+                failed += 1
+                continue
+            f = post_file(post["url"])
             if f.exists() and not args.refresh:
                 skipped += 1
                 continue
-            html = fetch(url, args.delay)
-            if not html:
-                failed += 1
-                continue
-            try:
-                post = extract_post(url, html)
-            except Exception as e:  # ett trasigt inlägg ska inte stoppa resten
-                print(f"  ! kunde inte tolka {url}: {e}", file=sys.stderr)
-                failed += 1
-                continue
-            post["order"] = order
             f.write_text(json.dumps(post, ensure_ascii=False, indent=1), encoding="utf-8")
             saved += 1
-            print(f"  + {post['date'][:10]} {post['title']}")
             if args.limit and saved >= args.limit:
                 print(f"Gräns på {args.limit} nådd.")
-                print(f"Klart: {saved} nya, {skipped} fanns redan, {failed} misslyckades")
+                print(f"Klart: {saved} sparade, {skipped} fanns redan, {failed} misslyckades")
                 return
-    print(f"Klart: {saved} nya, {skipped} fanns redan, {failed} misslyckades")
+    print(f"Klart: {total} inlägg hittade, {saved} sparade, {skipped} fanns redan, {failed} misslyckades")
 
 
 if __name__ == "__main__":
